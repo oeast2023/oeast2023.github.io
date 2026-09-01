@@ -11,9 +11,26 @@
             <!--div tags makes stuff easier to read-->
             <div>
                 <label for="studentName">Full Name</label> <!--for must match id text-->
-                <input type="text" id="studentName" requried>
+                <input type="text" id="studentName" required>
             </div>
             <br> <!--br = linebreak-->
+
+            <div>
+                <label for="studentEmail">University Email:</label>
+                <input type="email" id="studentEmail" required>
+            </div>
+            <br>
+
+            <div>
+                <p>Primary Focus:</p>
+                <input type="radio" id="focus1" name="projectFocus" value="value1" checked> <!--radio = multiple choice check button-->
+                <label for="focus1">Focus 1</label>
+                <br>
+
+                <input type="radio" id="focus2" name="projectFocus" value="value2"> <!--name has to match between the radio buttons you want to tie together, remove checked so only one can be checked-->
+                <label for="focus2">Focus 2</label>
+                <br>
+            </div>
 
             <button type="submit">Submit Project</button> <!--text that will show on website is the white text between the <>-->
 
