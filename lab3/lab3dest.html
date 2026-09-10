@@ -18,11 +18,19 @@
 
             //resultOuput is thing you want access to
             const outputDiv = document.getElementById("resultOutput");
-
+            // if queryValue exists it will do this
+            if(queryValue) {
             //put const as the thing in the braces
             outputDiv.innerHTML = `
               <p>Query value: ${queryValue}</p>
             `;
+        }
+        else {
+            outputDiv.innerHTML = `
+            <p>Go back to previous page to input data</p>
+            <a href="lab3.html">Back</a>
+            `;
+        }
         </script>
     </body>
 </html>
