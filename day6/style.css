@@ -11,3 +11,9 @@ p {
     color: green;
     font-size: 30;
 }
+/* class selector starts with . */
+
+#example-id {
+    color: red;
+    font-size: 10;
+}
