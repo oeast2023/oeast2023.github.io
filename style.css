@@ -1,7 +1,7 @@
 body {
     background-color: lightseagreen;
     font-family: Arial, sans-serif;
-    margin: 40 px;
+    margin: 40px;
     color: gray;
 }
 
@@ -9,7 +9,7 @@ h1 {
     background-color: darkslategrey;
     color: white;
     padding: 20px;
-    border-radius: 15 px;
+    border-radius: 15px;
     text-align: center;
 }
 
