@@ -15,7 +15,7 @@ body {
 }
 
 .highlight {
-    background-color: rgba(255, 235, 59, 0.3);
+    background-color: gray;
     font-weight: bold;
     border-left: 4 px solid #000000;
 }
@@ -24,5 +24,4 @@ body {
     background-color: #ae5050;
     color: white;
     text-align: center;
-    border-bottom: 5px solid #000000;
 }
