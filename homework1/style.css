@@ -17,7 +17,7 @@ body {
 .highlight {
     background-color: gray;
     font-weight: bold;
-    border-left: 4 px solid #000000;
+    border-left: 4px solid #000000;
 }
 
 #main-header {
