@@ -1,0 +1,10 @@
+h1, h2, h3 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black
+}
+
+.highlight {
+    background-color: rgba(255, 235, 59, 0.3);
+    font-weight: bold;
+    border-left: 4 px solid #000000;
+}
