@@ -33,7 +33,7 @@ function withdrawMoney() {
     }
     else
     {
-        healthText.innerText = 0;
+        remainingText.innerText = 0;
         statusText.innerText = "Bankrupt!";
         statusText.style.color = "#f9331d";
         statusText.style.fontWeight = "bold";
