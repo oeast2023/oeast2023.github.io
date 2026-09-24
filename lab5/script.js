@@ -30,8 +30,9 @@ function withdrawMoney() {
     {
         remainingText.innerText = amountRemaining;
         statusText.innerText = "Get Yourself Something Nice!";
+        statusText.style.color = "#f9331d";
 
-        document.body.style.backgroundColor = "#008b8b";
+        document.body.style.backgroundColor = "#ffffff";
     }
     else
     {
