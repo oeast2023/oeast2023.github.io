@@ -48,7 +48,7 @@ function withdrawMoney() {
         document.body.style.backgroundColor = "#5a1a1a";
 
         // should we take this out??//
-        document.querySelector("button").disabled = true;
-        document.querySelector("button").innerText = "Broke";
+       // document.querySelector("button").disabled = true;
+       // document.querySelector("button").innerText = "Broke";
     }
 }
