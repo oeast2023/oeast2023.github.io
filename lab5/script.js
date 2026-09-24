@@ -14,6 +14,9 @@ function depositMoney() {
     {
         remainingText.innerText = amountRemaining;
         statusText.innerText = "Cha-Ching!";
+        statusText.style.color = "#ffffff";
+
+        document.body.style.backgroundColor = "#008b8b";
     }
 }
 
@@ -30,9 +33,9 @@ function withdrawMoney() {
     {
         remainingText.innerText = amountRemaining;
         statusText.innerText = "Get Yourself Something Nice!";
-        statusText.style.color = "#f9331d";
+        statusText.style.color = "#ffffff";
 
-        document.body.style.backgroundColor = "#ffffff";
+        document.body.style.backgroundColor = "#008b8b";
     }
     else
     {
