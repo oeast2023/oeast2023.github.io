@@ -29,18 +29,18 @@ function withdrawMoney() {
     if(amountRemaining > 0)
     {
         remainingText.innerText = amountRemaining;
-        statusText.innerText = "Cha-Ching!";
+        statusText.innerText = "Get Yourself Something Nice!";
     }
     else
     {
         healthText.innerText = 0;
-        statusText.innerText = "Game Over!";
+        statusText.innerText = "Bankrupt!";
         statusText.style.color = "#f9331d";
         statusText.style.fontWeight = "bold";
 
         document.body.style.backgroundColor = "#5a1a1a";
 
         document.querySelector("buttton").disabled = true;
-        document.querySelector("buttton").innerText = "Dead";
+        document.querySelector("buttton").innerText = "Broke";
     }
 }
