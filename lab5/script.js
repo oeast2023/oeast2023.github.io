@@ -40,7 +40,7 @@ function withdrawMoney() {
 
         document.body.style.backgroundColor = "#5a1a1a";
 
-        document.querySelector("buttton").disabled = true;
+        document.querySelector("buttton").disabled = false;
         document.querySelector("buttton").innerText = "Broke";
     }
 }
