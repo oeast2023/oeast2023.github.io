@@ -8,7 +8,7 @@ function depositMoney() {
     const remainingText = document.getElementById("amount-remaining");
     const statusText = document.getElementById("status-message");
 
-    reaminingText.innerText = amountRemaining;
+    remainingText.innerText = amountRemaining;
 
     if(amountRemaining > 0)
     {
@@ -24,7 +24,7 @@ function withdrawMoney() {
     const remainingText = document.getElementById("amount-remaining");
     const statusText = document.getElementById("status-message");
 
-    reaminingText.innerText = amountRemaining;
+    remainingText.innerText = amountRemaining;
 
     if(amountRemaining > 0)
     {
