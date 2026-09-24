@@ -34,6 +34,7 @@ function withdrawMoney() {
     else
     {
         remainingText.innerText = 0;
+        amountRemaining = 0;
         statusText.innerText = "Bankrupt!";
         statusText.style.color = "#f9331d";
         statusText.style.fontWeight = "bold";
