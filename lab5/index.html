@@ -1,0 +1,36 @@
+<!--let = values that can be changed-->
+<!--Booleans = true/false-->
+<!--text must be wrapped in ""-->
+<!--Conditionals- if any one of them run -> others won't get checked
+        if
+        else if
+        else- defaults to this if other conditions aren't met-->
+<!--Comparison operators
+        === - stricly equal
+        !== not equal to-->
+<!--Function = will call the macro for you
+        use camelcase (lowercase first letter, every other one = capitalized)-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bank Account</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="deposit">
+            <h2>Bank Account</h2>
+            
+            <p>Amount remaining: <span id="amount-remaining">100</span></p>
+            <p id="status-message">You're rich!</p>
+
+            <button onclick="depositMoney()">Deposit $10</button>
+            <button onclick="withdrawMoney()">Wtihdraw $10</button>
+        </div>
+
+        <script src="script.js"></script>
+
+    </body>
+</html>
