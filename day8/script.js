@@ -13,7 +13,7 @@ const_contents = [
 function loadInventory() {
     const listElement = document.getElementById("item-list");
 
-    listElement.innerHTML "";
+    listElement.innerHTML = "";
 
     for(let i = 0; i < contents.length; 1++)
     // i = temporary variable; < = true/false statement; 1++ = adding 1 to i for each loop until the condition is no longer met
