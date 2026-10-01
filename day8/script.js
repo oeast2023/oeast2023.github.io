@@ -13,5 +13,7 @@ const_contents = [
 function loadInventory() {
     const listElement = document.getElementById("item-list");
 
-        listElement.innerHTML "";
+    listElement.innerHTML "";
+
+
 }
