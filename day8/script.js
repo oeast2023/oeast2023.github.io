@@ -2,7 +2,7 @@
 //We can put multiple pieces of data in one place using arrays
 //Arrays are created using []
 //Arrays ensure you don't have to make a bunch of new variables, can be added to over time
-const_contents = [
+const contents = [
     "Health Potion",
     "Sword",
     "Shield",
