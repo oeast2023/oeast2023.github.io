@@ -26,5 +26,5 @@ function loadInventory() {
     }
 
     document.querySelector("button").disabled = true;
-    document.querySelector("button").innerText "Backpack Full";
+    document.querySelector("button").innerText = "Backpack Full";
 }
