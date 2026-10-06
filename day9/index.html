@@ -1,49 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Carolina Game Day Checklist</title>
-        <!-- External CSS Stylesheet Link -->
-        <link rel="stylesheet" href="style.css">
-    </head>
-        <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carolina Game Day Checklist</title>
+    <!-- External CSS Stylesheet Link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-            <!-- Main landmark layout container for page content accessibility -->
-            <main class="checklist-container">
-                
-                <header>
-                    <h1>Carolina Game Day Checklist</h1>
-                </header>
-                
-                <!-- Input section grouped semantics -->
-                <section class="input-group" aria-labelledby="input-heading">
-                    <h2 id="input-heading" class="visually-hidden">Add Checklist Items</h2>
-                    
-                    <label for="item-input" class="visually-hidden">New Checklist Item</label>
-                    <input 
-                        type="text" 
-                        id="item-input" 
-                        placeholder="Add game day gear (e.g., Clear bag, Tickets)..." 
-                        autocomplete="off"
-                        required
-                    >
-                    
-                    <button id="add-button" type="button">Add Item</button>
-                </section>
+    <!-- Main landmark layout container for page content accessibility -->
+    <main class="checklist-container">
+        
+        <header>
+            <h1>Carolina Game Day Checklist</h1>
+        </header>
+        
+        <!-- Input section grouped semantics as a functional form structure -->
+        <form class="input-group" id="checklist-form" onsubmit="return false;">
+            <label for="item-input" class="visually-hidden">New Checklist Item</label>
+            <input 
+                type="text" 
+                id="item-input" 
+                placeholder="Add game day gear (e.g., Coolers, Hats)..." 
+                autocomplete="off"
+                required
+            >
+            <button id="add-button" type="submit">Add Item</button>
+        </form>
 
-                <!-- Checklist display area -->
-                <section class="list-group" aria-labelledby="list-heading">
-                    <h2 id="list-heading" class="visually-hidden">Your Items</h2>
-                    
-                    <ul id="checklist">
-                        <!-- List items will be injected here dynamically by JavaScript -->
-                    </ul>
-                </section>
+        <!-- Checklist display area -->
+        <section class="list-group" aria-labelledby="list-heading">
+            <h2 id="list-heading" class="visually-hidden">Your Items</h2>
+            
+            <ul id="checklist">
+                <!-- List items will be injected here dynamically by script.js -->
+            </ul>
+        </section>
 
-            </main>
+    </main>
 
-            <!-- External JavaScript File Link -->
-            <script src="script.js" defer></script>
-        </body>
+    <!-- External JavaScript File Link -->
+    <script src="script.js" defer></script>
+</body>
 </html>
