@@ -1,180 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carolina Game Day Checklist</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Carolina Game Day Checklist</title>
+        <!-- External CSS Stylesheet Link -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+        <body>
 
-        .checklist-container {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 400px;
-            border-top: 8px solid #73000A; /* Carolina Garnet Accent */
-        }
+            <!-- Main landmark layout container for page content accessibility -->
+            <main class="checklist-container">
+                
+                <header>
+                    <h1>Carolina Game Day Checklist</h1>
+                </header>
+                
+                <!-- Input section grouped semantics -->
+                <section class="input-group" aria-labelledby="input-heading">
+                    <h2 id="input-heading" class="visually-hidden">Add Checklist Items</h2>
+                    
+                    <label for="item-input" class="visually-hidden">New Checklist Item</label>
+                    <input 
+                        type="text" 
+                        id="item-input" 
+                        placeholder="Add game day gear (e.g., Clear bag, Tickets)..." 
+                        autocomplete="off"
+                        required
+                    >
+                    
+                    <button id="add-button" type="button">Add Item</button>
+                </section>
 
-        h2 {
-            margin-top: 0;
-            color: #111111;
-            text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 22px;
-        }
+                <!-- Checklist display area -->
+                <section class="list-group" aria-labelledby="list-heading">
+                    <h2 id="list-heading" class="visually-hidden">Your Items</h2>
+                    
+                    <ul id="checklist">
+                        <!-- List items will be injected here dynamically by JavaScript -->
+                    </ul>
+                </section>
 
-        .input-area {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
+            </main>
 
-        input[type="text"] {
-            flex: 1;
-            padding: 10px;
-            border: 1px solid #cccccc;
-            border-radius: 4px;
-            font-size: 16px;
-            outline: none;
-        }
-
-        input[type="text"]:focus {
-            border-color: #73000A;
-        }
-
-        button {
-            padding: 10px 15px;
-            background-color: #73000A; /* Carolina Garnet */
-            color: white;
-            border: none;
-            border-radius: 4px;
-            font-size: 16px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background-color 0.2s;
-        }
-
-        button:hover {
-            background-color: #520007;
-        }
-
-        .checklist {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .checklist-item {
-            display: flex;
-            align-items: center;
-            padding: 10px;
-            border-bottom: 1px solid #eeeeee;
-            font-size: 16px;
-            color: #333333;
-            animation: fadeIn 0.3s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-5px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .checklist-item input[type="checkbox"] {
-            margin-right: 12px;
-            width: 18px;
-            height: 18px;
-            cursor: pointer;
-            accent-color: #73000A;
-        }
-
-        .checklist-item input[type="checkbox"]:checked + label {
-            text-decoration: line-through;
-            color: #888888;
-        }
-
-        .checklist-item label {
-            cursor: pointer;
-            flex: 1;
-            word-break: break-word;
-        }
-    </style>
-</head>
-<body>
-
-<div class="checklist-container">
-    <h2>Carolina Game Day Checklist</h2>
-    
-    <div class="input-area">
-        <input type="text" id="itemInput" placeholder="Add game day gear..." autocomplete="off">
-        <button id="addButton">Add</button>
-    </div>
-
-    <ul id="checklist" class="checklist">
-        <!-- Pre-populated Game Day sample items -->
-        <li class="checklist-item">
-            <input type="checkbox" id="item-1">
-            <label for="item-1">Pack the tailgate chairs</label>
-        </li>
-        <li class="checklist-item">
-            <input type="checkbox" id="item-2">
-            <label for="item-2">Grab clear stadium bag</label>
-        </li>
-        <li class="checklist-item">
-            <input type="checkbox" id="item-3">
-            <label for="item-3">Download digital tickets</label>
-        </li>
-    </ul>
-</div>
-
-<script>
-    const itemInput = document.getElementById('itemInput');
-    const addButton = document.getElementById('addButton');
-    const checklist = document.getElementById('checklist');
-    let itemCounter = 4; 
-
-    function addItem() {
-        const itemText = itemInput.value.trim();
-        if (itemText === '') return;
-
-        const li = document.createElement('li');
-        li.className = 'checklist-item';
-
-        const checkbox = document.createElement('input');
-        checkbox.type = 'checkbox';
-        checkbox.id = `item-${itemCounter}`;
-
-        const label = document.createElement('label');
-        label.setAttribute('for', `item-${itemCounter}`);
-        label.textContent = itemText;
-
-        li.appendChild(checkbox);
-        li.appendChild(label);
-        checklist.appendChild(li);
-
-        itemInput.value = '';
-        itemInput.focus();
-        itemCounter++;
-    }
-
-    addButton.addEventListener('click', addItem);
-
-    itemInput.addEventListener('keypress', function(event) {
-        if (event.key === 'Enter') {
-            addItem();
-        }
-    });
-</script>
-
-</body>
+            <!-- External JavaScript File Link -->
+            <script src="script.js" defer></script>
+        </body>
 </html>
