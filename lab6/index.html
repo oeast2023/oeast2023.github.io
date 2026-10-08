@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rise and Grind Bakery</title>
     
-    <!-- EMBEDDED CSS STYLE GUIDE -->
+    <!-- EMBEDDED GLOBAL CSS STYLE GUIDE -->
     <style>
         /* Design Tokens & Theme Variables */
         :root {
@@ -36,7 +36,7 @@
             overflow: hidden;
         }
 
-        /* Layout Structure Frame */
+        /* Layout Layout Framework */
         .app-container {
             display: flex;
             width: 100vw;
@@ -75,7 +75,7 @@
             gap: 15px;
         }
 
-        /* Interactive Sidebar Buttons */
+        /* Sidebar Action Triggers */
         .nav-btn {
             background: transparent;
             border: 1px solid #3a3a42;
@@ -102,7 +102,7 @@
             border-color: var(--accent-color);
         }
 
-        /* Main Display Canvas (Occupies remaining 80% width) */
+        /* Main Body Canvas (Occupies remaining 80% width) */
         .main-content {
             width: 80%;
             height: 100%;
@@ -122,10 +122,9 @@
             font-weight: 900;
             letter-spacing: 4px;
             color: var(--text-dark);
-            transition: opacity 0.2s ease;
         }
 
-        /* Dynamic Presentation Layout Frame */
+        /* Presentation Section Frame */
         .content-body {
             padding: 50px;
             display: flex;
@@ -134,7 +133,7 @@
             max-width: 900px;
         }
 
-        /* Responsive Picture Element Wrapper */
+        /* Responsive Picture Element Block */
         .image-wrapper {
             width: 100%;
             height: 380px;
@@ -150,7 +149,7 @@
             display: block;
         }
 
-        /* Content Text Typography Layout */
+        /* Typography Layout Framework */
         .text-wrapper h2 {
             font-size: 1.8rem;
             margin-bottom: 15px;
@@ -163,7 +162,7 @@
             color: #55555d;
         }
 
-        /* Fluid layout fallback for smaller screens */
+        /* Responsive scaling fallbacks for small windows */
         @media (max-width: 900px) {
             .app-container { flex-direction: column; }
             .sidebar { width: 100%; height: auto; padding: 20px; }
@@ -175,19 +174,19 @@
 <body>
 
     <div class="app-container">
-        <!-- Sidebar Navigation Layout (20% Width) -->
+        <!-- Sidebar Navigation Layout (Takes up 20% of screen) -->
         <aside class="sidebar">
-            <div class="sidebar-title-wrapper" onclick="resetToHome()">
+            <div class="sidebar-title-wrapper" onclick="navigateToPage('home')">
                 <h2 class="sidebar-title">Resources</h2>
             </div>
             <nav class="sidebar-nav">
-                <button id="btn-mission" class="nav-btn" onclick="showContent('mission')">Our Mission</button>
-                <button id="btn-bread" class="nav-btn" onclick="showContent('bread')">Our Bread</button>
-                <button id="btn-reviews" class="nav-btn" onclick="showContent('reviews')">Reviews</button>
+                <button id="btn-mission" class="nav-btn" onclick="navigateToPage('mission')">Our Mission</button>
+                <button id="btn-bread" class="nav-btn" onclick="navigateToPage('bread')">Our Bread</button>
+                <button id="btn-reviews" class="nav-btn" onclick="navigateToPage('reviews')">Reviews</button>
             </nav>
         </aside>
 
-        <!-- Main Content Panel (80% Width) -->
+        <!-- Main Body Portion (Takes up 80% of screen) -->
         <main class="main-content">
             <header class="main-header">
                 <h1 id="page-header">RISE AND GRIND</h1>
@@ -201,22 +200,22 @@
                 
                 <!-- Changeable Content Copy Container -->
                 <div id="dynamic-text" class="text-wrapper">
-                    <h2>The Legend of Meemaw's Starter</h2>
-                    <p>Every single loaf of bread pulled from the ovens here at Rise and Grind shares a single heartbeat. Our baking lineage traces all the way back to my great-great-great-great-great Meemaw, who cultivated an extraordinary wild yeast culture generations ago.</p>
-                    <p style="margin-top: 15px;">Through cross-country travels, challenging winters, and the passing of decades, her ancient sourdough starter was carefully kept alive, fed daily like a cherished family member. Today, we carry on that exact tradition. When you taste our bread, you aren't just eating standard ingredients—you are experiencing over a century of history, dedication, and Meemaw's timeless legacy.</p>
+                    <h2>The Legend of Meemaw & Andrew Barth-Feldman</h2>
+                    <p>Every single loaf of bread pulled from the blazing hearths here at Rise and Grind shares a single ancestral heartbeat. Our baking lineage traces all the way back to my great-great-great-great-great Meemaw, who cultivated an extraordinary, resilient wild yeast culture generations ago.</p>
+                    <p style="margin-top: 15px;">She named this living sourdough starter <strong>Andrew Barth-Feldman</strong>. Through cross-country travels, challenging winters, historic migration, and the passing of over a century, Andrew Barth-Feldman has been carefully kept alive—fed meticulously every single day like a cherished family member. Today, all of our bread is derived entirely from this ancient starter. When you taste our bread, you are experiencing pure living history.</p>
                 </div>
             </section>
         </main>
     </div>
 
-    <!-- EMBEDDED JAVASCRIPT APPLICATION CORE -->
+    <!-- EMBEDDED JAVASCRIPT SYSTEM LINK ROUTER -->
     <script>
-        // Central Repository for Dynamic Sections
-        const contentDatabase = {
+        // Central database linking the separate pseudo-pages
+        const pagesDatabase = {
             home: {
                 header: "RISE AND GRIND",
-                title: "The Legend of Meemaw's Starter",
-                text: "<p>Every single loaf of bread pulled from the ovens here at Rise and Grind shares a single heartbeat. Our baking lineage traces all the way back to my great-great-great-great-great Meemaw, who cultivated an extraordinary wild yeast culture generations ago.</p><p style='margin-top: 15px;'>Through cross-country travels, challenging winters, and the passing of decades, her ancient sourdough starter was carefully kept alive, fed daily like a cherished family member. Today, we carry on that exact tradition. When you taste our bread, you aren't just eating standard ingredients—you are experiencing over a century of history, dedication, and Meemaw's timeless legacy.</p>",
+                title: "The Legend of Meemaw & Andrew Barth-Feldman",
+                text: "<p>Every single loaf of bread pulled from the blazing hearths here at Rise and Grind shares a single ancestral heartbeat. Our baking lineage traces all the way back to my great-great-great-great-great Meemaw, who cultivated an extraordinary, resilient wild yeast culture generations ago.</p><p style='margin-top: 15px;'>She named this living sourdough starter <strong>Andrew Barth-Feldman</strong>. Through cross-country travels, challenging winters, historic migration, and the passing of over a century, Andrew Barth-Feldman has been carefully kept alive—fed meticulously every single day like a cherished family member. Today, all of our bread is derived entirely from this ancient starter. When you taste our bread, you are experiencing pure living history.</p>",
                 imageSrc: "https://unsplash.com",
                 imageAlt: "Bread dough rising closely inside a baker's bowl"
             },
@@ -225,14 +224,14 @@
                 title: "Our Mission",
                 text: "<p>At Rise and Grind, we believe great mornings begin with great fermentation. Our mission is to preserve the historic art of slow-leavened sourdough baking while energizing our local community. We source 100% organic, stone-ground grains to ensure every loaf has optimal flavor, texture, and nutritional value. No shortcuts, no artificial additives—just passion, water, flour, and time.</p>",
                 imageSrc: "https://unsplash.com",
-                imageAlt: "Rustic flour hands shaping rising bread loaves on a wooden table"
+                imageAlt: "Artisan baker's flour-dusted hands shaping proofed bread dough loaves"
             },
             bread: {
                 header: "CRUST & CRUMB",
                 title: "Our Bread Collection",
                 text: "<p>Every loaf we pull from our stone hearth carries a deeply caramelized crust and an open, airy crumb architecture. From our flagship Country Wild Sourdough to our dense German-style Rye and honey-infused Whole Wheat, our breads are naturally fermented for 36 hours. This slow process breaks down complex starches, resulting in unmatched depth of flavor and easy digestion.</p>",
                 imageSrc: "https://unsplash.com",
-                imageAlt: "Fresh baked crusty artisan sourdough breads lined up on a rack"
+                imageAlt: "Freshly baked artisan sourdough bread loaves cooling down on standard wire racks"
             },
             reviews: {
                 header: "BAKED TO PERFECTION",

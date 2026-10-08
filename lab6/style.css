@@ -1,7 +1,3 @@
-/* ==========================================
-   RISE AND GRIND - BRAND STYLE GUIDE & LAYOUT
-   ========================================== */
-
 /* Design Tokens & Theme Variables */
 :root {
     --bg-primary: #fcfbfa;
@@ -15,7 +11,7 @@
     --transition-speed: 0.3s;
 }
 
-/* Global Document Reset */
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
@@ -30,14 +26,13 @@ body {
     overflow: hidden;
 }
 
-/* Base Flexible Container */
 .app-container {
     display: flex;
     width: 100vw;
     height: 100vh;
 }
 
-/* Sidebar Navigation Panel (Occupies exactly 20% viewport width) */
+/* Sidebar Layout (Locks to exactly 20% width) */
 .sidebar {
     width: 20%;
     background-color: var(--bg-sidebar);
@@ -65,7 +60,7 @@ body {
     gap: 15px;
 }
 
-/* Sidebar Interaction Elements */
+/* Buttons System */
 .nav-btn {
     background: transparent;
     border: 1px solid #3a3a42;
@@ -77,6 +72,7 @@ body {
     border-radius: 6px;
     cursor: pointer;
     transition: all var(--transition-speed) ease;
+    width: 100%;
 }
 
 .nav-btn:hover {
@@ -91,7 +87,7 @@ body {
     border-color: var(--accent-color);
 }
 
-/* Main Display Canvas (Occupies remaining 80% width) */
+/* Main Content Body Canvas (Locks to exactly 80% width) */
 .main-content {
     width: 80%;
     height: 100%;
@@ -113,7 +109,6 @@ body {
     color: var(--text-dark);
 }
 
-/* Dynamic Content Section Frame */
 .content-body {
     padding: 50px;
     display: flex;
@@ -122,10 +117,9 @@ body {
     max-width: 900px;
 }
 
-/* Responsive Image Handling */
 .image-wrapper {
     width: 100%;
-    max-height: 400px;
+    height: 380px;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
@@ -136,10 +130,8 @@ body {
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: opacity var(--transition-speed) ease;
 }
 
-/* Typography Layout Rules */
 .text-wrapper h2 {
     font-size: 1.8rem;
     margin-bottom: 15px;
@@ -152,7 +144,7 @@ body {
     color: #55555d;
 }
 
-/* Fluid layout fix for small viewports */
+/* Mobile responsive scaling */
 @media (max-width: 900px) {
     .app-container { flex-direction: column; }
     .sidebar { width: 100%; height: auto; }

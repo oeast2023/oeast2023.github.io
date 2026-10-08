@@ -1,40 +1,35 @@
 /**
  * RISE AND GRIND - Router & Active State Manager
- * Ensures clicking a sidebar button routes the user to the correct page
- * and handles matching active style configurations.
+ * Handles multi-page routing and button highlighting states across separate files.
  */
 
-/**
- * Handles browser window navigation to alternative page files.
- * @param {string} pageName - The filename to target (e.g., 'index.html', 'bread.html')
- */
 function navigateToPage(pageName) {
-    // Standard routing logic to load independent HTML documents
+    // Explicit routing logic to take you directly to the corresponding web page file
     window.location.href = pageName;
 }
 
-// Automatically highlight the correct button depending on which file is open
+// Automatically highlight the matching button once the corresponding page loads
 document.addEventListener("DOMContentLoaded", () => {
     const currentPath = window.location.pathname;
 
-    // Cache layout navigation buttons from the DOM
+    // Cache the sidebar button elements from the DOM
     const btnMission = document.getElementById("btn-mission");
     const btnBread = document.getElementById("btn-bread");
     const btnReviews = document.getElementById("btn-reviews");
 
-    // Remove active style classes across all elements to reset states safely
+    // Clear active highlight styling classes across all buttons first
     const buttons = [btnMission, btnBread, btnReviews];
     buttons.forEach(btn => {
         if (btn) btn.classList.remove("active");
     });
 
     // Check the active window pathname and match the highlighted styling state
-    if (currentPath.includes("reviews.html") && btnReviews) {
-        btnReviews.classList.add("active");
+    if (currentPath.includes("mission.html") && btnMission) {
+        btnMission.classList.add("active");
     } else if (currentPath.includes("bread.html") && btnBread) {
         btnBread.classList.add("active");
-    } else if (btnMission) {
-        // Fallback default state highlights the landing index.html page
-        btnMission.classList.add("active");
+    } else if (currentPath.includes("reviews.html") && btnReviews) {
+        btnReviews.classList.add("active");
     }
+    // Note: If on index.html, no buttons are highlighted, preserving the primary story layout state.
 });
