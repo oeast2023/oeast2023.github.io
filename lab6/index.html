@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rise and Grind Bakery</title>
+    <!-- Linking the CSS Style Guide -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Sidebar Layout (20% Width) -->
+        <aside class="sidebar">
+            <h2 class="sidebar-title">Resources</h2>
+            <nav class="sidebar-nav">
+                <!-- Navigation triggers map directly to JavaScript click handlers -->
+                <button class="nav-btn active" onclick="showContent('mission')">Our Mission</button>
+                <button class="nav-btn" onclick="showContent('bread')">Our Bread</button>
+                <button class="nav-btn" onclick="showContent('reviews')">Reviews</button>
+            </nav>
+        </aside>
+
+        <!-- Main Body Portion (80% Width) -->
+        <main class="main-content">
+            <header class="main-header">
+                <h1 id="page-header">RISE AND GRIND</h1>
+            </header>
+            
+            <section class="content-body">
+                <!-- Image Container with a placeholder default image of dough rising -->
+                <div class="image-wrapper">
+                    <img id="dynamic-img" src="https://tasteofhome.com" alt="Fluffy bread dough rising in a rustic bowl">
+                </div>
+                <!-- Dynamic text container managed by app.js -->
+                <div id="dynamic-text" class="text-wrapper">
+                    <h2>Our Mission</h2>
+                    <p>At Rise and Grind, we believe great mornings begin with great fermentation. Our mission is to preserve the historic art of slow-leavened sourdough baking while energizing our local community. We source 100% organic, stone-ground grains to ensure every loaf has optimal flavor, texture, and nutritional value. No shortcuts, no artificial additives—just passion, water, flour, and time.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Linking the Application Logic script -->
+    <script src="app.js"></script>
+</body>
+</html>

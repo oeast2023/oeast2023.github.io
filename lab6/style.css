@@ -1,0 +1,160 @@
+/* ==========================================
+   RISE AND GRIND - BRAND STYLE GUIDE & LAYOUT
+   ========================================== */
+
+/* Design Tokens & Theme Variables */
+:root {
+    --bg-primary: #fcfbfa;
+    --bg-sidebar: #1e1e24;
+    --text-dark: #2b2b2b;
+    --text-light: #ffffff;
+    --text-muted: #a0a0a5;
+    --accent-color: #d4a373;
+    --accent-hover: #e9c46a;
+    --font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --transition-speed: 0.3s;
+}
+
+/* Global Document Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-stack);
+    background-color: var(--bg-primary);
+    color: var(--text-dark);
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Base Flexible Container */
+.app-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Sidebar Navigation Panel (Occupies exactly 20% viewport width) */
+.sidebar {
+    width: 20%;
+    background-color: var(--bg-sidebar);
+    color: var(--text-light);
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.sidebar-title {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    border-bottom: 2px solid #3a3a42;
+    padding-bottom: 15px;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Sidebar Interaction Elements */
+.nav-btn {
+    background: transparent;
+    border: 1px solid #3a3a42;
+    color: var(--text-muted);
+    padding: 14px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: left;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+}
+
+.nav-btn:hover {
+    color: var(--text-light);
+    background-color: #2a2a32;
+    border-color: var(--accent-color);
+}
+
+.nav-btn.active {
+    background-color: var(--accent-color);
+    color: var(--bg-sidebar);
+    border-color: var(--accent-color);
+}
+
+/* Main Display Canvas (Occupies remaining 80% width) */
+.main-content {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.main-header {
+    background-color: #ffffff;
+    padding: 30px 50px;
+    border-bottom: 1px solid #eef0f2;
+}
+
+.main-header h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: 4px;
+    color: var(--text-dark);
+}
+
+/* Dynamic Content Section Frame */
+.content-body {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 900px;
+}
+
+/* Responsive Image Handling */
+.image-wrapper {
+    width: 100%;
+    max-height: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity var(--transition-speed) ease;
+}
+
+/* Typography Layout Rules */
+.text-wrapper h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.text-wrapper p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #55555d;
+}
+
+/* Fluid layout fix for small viewports */
+@media (max-width: 900px) {
+    .app-container { flex-direction: column; }
+    .sidebar { width: 100%; height: auto; }
+    .main-content { width: 100%; }
+}
