@@ -5,3 +5,12 @@ body {
     text-align: center;
     margin-top: 40px;
 }
+
+#game-container {
+    background-color: darkslategray;
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px gray;
+}
