@@ -26,9 +26,9 @@ function buyKeyboard()
 
 function buyIntern()
 {
-    if(linesofCode >= internCost)
+    if(linesOfCode >= internCost)
     {
-        linesofCode = linesofCode - internCost;
+        linesOfCode = linesOfCode - internCost;
         interns = interns + 1;
         internCost = internCost = 1.5;
         updateScreen();
@@ -49,9 +49,9 @@ function updateScreen()
 
 //testing
 setInterval(function() {
-    if(inters > 0)
+    if(interns > 0)
     {
-        linesofCode = linesofCode + interns;
+        linesOfCode = linesOfCode + interns;
         updateScreen();
     }
 },
