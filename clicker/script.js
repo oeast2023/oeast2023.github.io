@@ -47,6 +47,7 @@ function updateScreen()
 
 }
 
+//testing
 setInterval(function() {
     if(inters > 0)
     {
