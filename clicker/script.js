@@ -30,7 +30,7 @@ function buyIntern()
     {
         linesOfCode = linesOfCode - internCost;
         interns = interns + 1;
-        internCost = internCost = 1.5;
+        internCost = internCost * 1.5;
         updateScreen();
     }
 }
