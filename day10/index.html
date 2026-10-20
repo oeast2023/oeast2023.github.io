@@ -16,7 +16,11 @@
 
         <!--temporary (session) storage example-->
         <div class="box">
-
+            <h3>Temp Storage</h3>
+            <p>Current Data: <span id="data">Empty</span></p>
+            <input type="text" id="data-input" placeholder="Type a message">
+            <button onclick="saveData()">Temp Save</button>
+            <button onclick="loadData()">Temp Load</button>
         </div>
 
         <script src="script.js"></script> <!--alwyas put this at the end so everything loads before it-->
