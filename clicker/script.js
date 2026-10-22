@@ -7,6 +7,9 @@ let upgradeCost = 50;
 let interns = 0;
 let internCost = 100;
 
+let fireIntern = 0;
+let fireInternCost = -1;
+
 function writeCode()
 {
     linesOfCode = linesOfCode + clickPower;
@@ -35,6 +38,17 @@ function buyIntern()
     }
 }
 
+function fireIntern()
+{
+    if(linesOfCode >= fireInternCost)
+    {
+        linesOfCode = linesOfCode - fireInternCost;
+        fireIntern = fireIntern + 1;
+        fireInternCost = fireInternCost * 2.5;
+        updateScreen();
+    }
+}
+
 function updateScreen()
 {
     document.getElementById("score-display").innerText = linesOfCode + " lines of code";
@@ -44,6 +58,9 @@ function updateScreen()
 
     document.getElementById("intern-display").innerText = interns;
     document.getElementById("cost-intern-display").innerText = internCost;
+
+    document.getElementById("fire-intern-display").innerText = fireIntern;
+    document.getElementById("cost-fire-intern-display").innerText = fireInternCost;
 
 }
 
