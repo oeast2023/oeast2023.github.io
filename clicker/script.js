@@ -46,14 +46,3 @@ function updateScreen()
     document.getElementById("intern-display-cost").innerText = internCost;
 
 }
-
-//testing
-setInterval(function() {
-    if(interns > 0)
-    {
-        linesOfCode = linesOfCode + interns;
-        updateScreen();
-    }
-},
-1000
-);
