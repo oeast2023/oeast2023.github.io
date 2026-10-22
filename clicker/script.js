@@ -7,6 +7,9 @@ let upgradeCost = 50;
 let interns = 0;
 let internCost = 100;
 
+let erase = 0;
+let eraseCost = linesOfCode;
+
 function writeCode()
 {
     linesOfCode = linesOfCode + clickPower;
@@ -35,6 +38,16 @@ function buyIntern()
     }
 }
 
+function eraseProgress()
+{
+    if(linesOfCode >= eraseCost)
+    {
+        linesOfCode = linesOfCode - eraseCost;
+        erase = erase + 1;
+        updateScreen();
+    }
+}
+
 function updateScreen()
 {
     document.getElementById("score-display").innerText = linesOfCode + " lines of code";
@@ -45,6 +58,9 @@ function updateScreen()
     document.getElementById("intern-display").innerText = interns;
     document.getElementById("cost-intern-display").innerText = internCost;
 
+
+    document.getElementById("erase-display").innerText = erase + " time(s)";
+    document.getElementById("cost-erase-display").innerText = eraseCost;
 }
 
 //testing
