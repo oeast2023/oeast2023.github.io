@@ -42,7 +42,7 @@ function eraseProgress()
 {
     if(linesOfCode >= eraseCost)
     {
-        linesOfCode = linesOfCode - eraseCost;
+        linesOfCode = linesOfCode - linesOfCode;
         erase = erase + 1;
         updateScreen();
     }
