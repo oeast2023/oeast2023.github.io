@@ -98,5 +98,5 @@ setInterval(function() {
         updateScreen();
     }
 },
-1000
+500
 );
