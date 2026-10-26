@@ -10,6 +10,9 @@ let internCost = 100;
 let erase = 0;
 let eraseCost = linesOfCode;
 
+let Fixit = 0;
+let FixitCost = 555;
+
 function writeCode()
 {
     linesOfCode = linesOfCode + clickPower;
@@ -48,6 +51,17 @@ function eraseProgress()
     }
 }
 
+function buyFixit()
+{
+    if(linesOfCode >= FixitCost)
+    {
+        linesOfCode = linesOfCode - FixitCost;
+        Fixit = Fixit + 1;
+        FixitCost = FixitCost * 3.0;
+        updateScreen();
+    }
+}
+
 function updateScreen()
 {
     document.getElementById("score-display").innerText = linesOfCode + " lines of code";
@@ -61,6 +75,9 @@ function updateScreen()
 
     document.getElementById("erase-display").innerText = erase + " time(s)";
     document.getElementById("cost-erase-display").innerText = eraseCost;
+
+    document.getElementById("fixit-display").innerText = Fixit;
+    document.getElementById("cost-fixit-display").innerText = FixitCost;
 }
 
 //testing
@@ -72,4 +89,14 @@ setInterval(function() {
     }
 },
 1000
+);
+
+setInterval(function() {
+    if(Fixit > 0)
+    {
+        linesOfCode = linesOfCode + Fixit;
+        updateScreen();
+    }
+},
+2000
 );
