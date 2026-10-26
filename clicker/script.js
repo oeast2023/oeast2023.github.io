@@ -11,7 +11,7 @@ let erase = 0;
 let eraseCost = linesOfCode;
 
 let Fixit = 0;
-let FixitCost = 555;
+let FixitCost = 55;
 
 function writeCode()
 {
