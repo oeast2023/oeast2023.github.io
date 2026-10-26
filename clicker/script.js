@@ -11,7 +11,7 @@ let erase = 0;
 let eraseCost = linesOfCode;
 
 let Fixit = 0;
-let FixitCost = 55;
+let FixitCost = 555;
 
 function writeCode()
 {
@@ -98,5 +98,5 @@ setInterval(function() {
         updateScreen();
     }
 },
-500
+300
 );
