@@ -12,7 +12,7 @@ function triggerBug2() {
     let outputText = document.getElementById("output2");
     outputText.innerText = "Code Fixed!";
     
-    let btn = document.getElementById("button-two"); 
+    let btn = document.getElementById("btn2"); //button-two instead fo btn2 in index.html
     btn.innerText = "Done";
     btn.disabled = true;
 }
