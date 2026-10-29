@@ -1,3 +1,4 @@
+//Problems are in comments
 function triggerBug1() {
     let outputText = document.getElementById("output1"); //Capitalized ID instead of Id
     outputText.innerText = "Code Fixed!";
