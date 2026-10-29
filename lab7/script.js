@@ -1,6 +1,6 @@
 //Problems are in comments
 function triggerBug1() {
-    let outputText = document.getElementById("output1"); //Capitalized ID instead of Id
+    let outputText = document.getElementById("output1"); //capitalized ID instead of Id
     outputText.innerText = "Code Fixed!";
     
     let btn = document.getElementById("btn1");
@@ -27,11 +27,10 @@ function triggerBug3() {
 }
 
 function triggerBug4() {
-    let studentName = "Cocky";
+    let studentname = "Cocky";
     let outputText = document.getElementById("output4");
     
-    outputText.innerText = studentname + " is here!"; 
-    
+    outputText.innerText = studentname + " is here!"; //studentname variable does not match (capitalized)
     let btn = document.getElementById("btn4");
     btn.innerText = "Done";
     btn.disabled = true;
