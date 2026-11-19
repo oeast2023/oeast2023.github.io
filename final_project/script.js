@@ -2,7 +2,7 @@ function updatePageContent() {
     pyramid: {
         header: "",
         title: "",
-        text: "<p>.</p>"
+        text: "<p></p>"
     },
     olive: {
         header: "",
@@ -17,7 +17,7 @@ function updatePageContent() {
   statue: {
         header: "",
         title: "",
-        text: "<p>.</p>"
+        text: "<p></p>"
     },
     lighthouse: {
         header: "",
