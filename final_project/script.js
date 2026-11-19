@@ -1,4 +1,4 @@
-const pageData = {
+function updatePageContent() {
     pyramid: {
         header: "",
         title: "",
@@ -66,7 +66,7 @@ function updatePageContent(pageKey) {
 }
 
 /**
- * Restores home page
+ * Restores everything back to Meemaw's original starter history view layout
  */
 function resetToHome() {
     document.getElementById("page-header").textContent = "RISE AND GRIND";
