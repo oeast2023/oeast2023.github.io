@@ -66,7 +66,7 @@ function updatePageContent(pageKey) {
 }
 
 /**
- * Restores everything back to Meemaw's original starter history view layout
+ * Restores home page
  */
 function resetToHome() {
     document.getElementById("page-header").textContent = "RISE AND GRIND";
@@ -80,3 +80,4 @@ function resetToHome() {
     // Strip out active focuses across buttons
     const buttons = document.querySelectorAll(".nav-btn");
     buttons.forEach(btn => btn.classList.remove("active"));
+}
